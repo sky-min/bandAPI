@@ -27,8 +27,7 @@ final class BandManager{
 		curl_setopt($curl, CURLOPT_URL, 'https://openapi.band.us/v2.1/bands?access_token=' . $this->token);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
-		$json = curl_exec($curl);
-		$decode = json_decode($json, true);
+		$decode = json_decode(curl_exec($curl), true);
 		curl_close($curl);
 		return $decode;
 	}
@@ -38,8 +37,7 @@ final class BandManager{
 		curl_setopt($curl, CURLOPT_URL, 'https://openapi.band.us/v2/band/posts?access_token=' . $this->token . '&band_key=' . $band_key . '&locale=' . $locale);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
-		$json = curl_exec($curl);
-		$decode = json_decode($json, true);
+		$decode = json_decode(curl_exec($curl), true);
 		curl_close($curl);
 		return $decode;
 	}
@@ -52,8 +50,7 @@ final class BandManager{
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
 		curl_setopt($curl, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $this->token]);
-		$json = curl_exec($curl);
-		$decode = json_decode($json, true);
+		$decode = json_decode(curl_exec($curl), true);
 		curl_close($curl);
 		return $decode;
 	}
@@ -66,8 +63,7 @@ final class BandManager{
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
 		curl_setopt($curl, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $this->token]);
-		$json =curl_exec($curl);
-		$decode = json_decode($json, true);
+		$decode = json_decode(curl_exec($curl), true);
 		curl_close($curl);
 		return $decode;
 	}
@@ -77,8 +73,7 @@ final class BandManager{
 		curl_setopt($curl, CURLOPT_URL, 'https://openapi.band.us/v2/band/post/comments?access_token=' . $this->token . '&band_key=' . $band_key . '&post_key=' . $post_key . '&sort=' . $sort . 'created_at');
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
-		$json = curl_exec($curl);
-		$decode = json_decode($json, true);
+		$decode = json_decode(curl_exec($curl), true);
 		curl_close($curl);
 		return $decode;
 	}
@@ -91,8 +86,7 @@ final class BandManager{
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
 		curl_setopt($curl, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $this->token]);
-		$json = curl_exec($curl);
-		$decode = json_decode($json, true);
+		$decode = json_decode(curl_exec($curl), true);
 		curl_close($curl);
 		return $decode;
 	}
@@ -105,8 +99,7 @@ final class BandManager{
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
 		curl_setopt($curl, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $this->token]);
-		$json = curl_exec($curl);
-		$decode = json_decode($json, true);
+		$decode = json_decode(curl_exec($curl), true);
 		curl_close($curl);
 		return $decode;
 	}
@@ -116,8 +109,7 @@ final class BandManager{
 		curl_setopt($curl, CURLOPT_URL, 'https://openapi.band.us/v2/band/permissions?access_token=' . $this->token . '&band_key=' . $band_key . '&permissions=' . $permissions);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
-		$json = curl_exec($curl);
-		$decode = json_decode($json, true);
+		$decode = json_decode(curl_exec($curl), true);
 		curl_close($curl);
 		return $json;
 	}
