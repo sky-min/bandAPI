@@ -67,7 +67,7 @@ final class BandManager{
 		curl_setopt($curl, CURLOPT_POSTFIELDS, $post_file);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
-		curl_setopt($curl, CURLOPT_HTTPHEADER, 'Authorization: Bearer ' . $acces_token]);
+		curl_setopt($curl, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $acces_token]);
 		$json =curl_exec($curl);
 		$decode = json_decode($json, true);
 		curl_close($curl);
