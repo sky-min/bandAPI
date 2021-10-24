@@ -41,5 +41,8 @@ $bandAPI->deleteComment($band_key, $post_key, $comment_key);
 $bandAPI->getPermissions($band_key, $permission = 'posting,commenting,contents_deletion');
 ```
 
+## Example
+[example](https://github.com/sky-min/bandAPI/tree/exaple)
+
 ## 밴드 acces_token 얻는 곳
 [바로가기](https://developers.band.us/)
