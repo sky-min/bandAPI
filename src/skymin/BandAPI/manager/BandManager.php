@@ -30,7 +30,7 @@ final class BandManager{
 		return $decode;
 	}
 	
-	public function getPosts(string $band_key = '', string $locale = '') :array{
+	public function getPosts(string $band_key = '', string $locale = 'ko_KR') :array{
 		$curl = curl_init('https://openapi.band.us/v2/band/posts?access_token=' . $this->token . '&band_key=' . $band_key . '&locale=' . $locale);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
