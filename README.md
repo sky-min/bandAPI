@@ -1,5 +1,5 @@
 # bandAPI
-bandAPI
+밴드 API
 
 ## how to use
 ```php
